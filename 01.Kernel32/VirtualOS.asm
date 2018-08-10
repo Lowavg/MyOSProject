@@ -25,7 +25,7 @@ START:
 		mul word[SECTORCOUNT]
 		mov si, ax
 
-		mov byte[es: si+(160*2)],'0' + (i%10)
+		mov byte[es: si+(160*2)],'0' + (i % 10)
 
 		add word[SECTORCOUNT], 1
 
@@ -33,11 +33,11 @@ START:
  			jmp $
 		%else
 			jmp (0x1000 + i * 0x20):0x0000
-		$endif
+		%endif
 		times (512-($-$$) % 512) db 0x00
 
 	
 	
-	$endrep	
+	%endrep	
 
 

@@ -5,8 +5,12 @@ SECTION .text ; Define text Section(Segment)
 
 jmp 0x07C0:START ; copy value 0x07C0 to CS segment reg(initialize seg reg)
 
+<<<<<<< HEAD
 TOTALSECTORCOUNT: dw 1 ; size of OS image, maximum 1152 sectors(0x90000byte)
 			; changed to 1 from 1024, as OS file changed from VirtualOS
+=======
+TOTALSECTORCOUNT: dw 1024 ; size of OS image, maximum 1152 sectors(0x90000byte)
+>>>>>>> 8b6709a2592a4c4243214c50badcca2858a6e5ae
 
 ;
 ; CODE AREA
